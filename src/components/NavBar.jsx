@@ -25,16 +25,16 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        "fixed w-full z-40 transition-all duration-300 bg-background/90 backdrop-blur-md",
+        isScrolled ? "py-3 shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-xl font-bold text-primary flex items-center relative z-50"
           href="#hero"
         >
-          <span className="relative z-10">
+          <span>
             <span className="text-glow text-foreground"> Ishak </span>{" "}
             MESSAOUDI
           </span>

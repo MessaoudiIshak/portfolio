@@ -34,7 +34,7 @@ export default function ContactSection  ()  {
 
             <div className="space-y-4">
               <div className="relative flex items-center justify-center bg-card p-4 rounded-lg shadow-xs hover:shadow-md hover:scale-[1.02] hover:bg-card/80 transition-all duration-300 cursor-pointer">
-                <div className="absolute left-6 p-3 rounded-full bg-primary/10">
+                <div className="absolute left-4 md:left-6 p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-center">
@@ -42,6 +42,7 @@ export default function ContactSection  ()  {
                   <a
                     href="mailto:ishakabderrahmane.messaoudi@ynov.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.65rem, 2.5vw, 1rem)' }}
                   >
                     ishakabderrahmane.messaoudi@ynov.com
                   </a>
