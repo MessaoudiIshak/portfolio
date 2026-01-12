@@ -1,16 +1,157 @@
-# React + Vite
+# Ishak MESSAOUDI - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React and Vite, showcasing my skills as a Full-Stack Developer.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Fully responsive across all devices
+- **Dark/Light Theme** - Toggle between themes with persistent preference
+- **Animated Star Background** - Interactive cosmic-themed background
+- **Smooth Animations** - CSS animations for engaging user experience
+- **Skills Showcase** - Visual skill representation with proficiency levels
+- **Single Page Application** - Fast navigation with React Router
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19
+- **Build Tool:** Vite 7
+- **Styling:** Tailwind CSS 4
+- **Routing:** React Router DOM
+- **Icons:** Lucide React, React Icons
+- **UI Components:** Radix UI (Toast)
+- **Utilities:** clsx, class-variance-authority, tailwind-merge
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+portfolio/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images and media
+│   ├── components/      # Reusable UI components
+│   │   ├── AboutSection.jsx
+│   │   ├── HeroSection.jsx
+│   │   ├── NavBar.jsx
+│   │   ├── SkillsSection.jsx
+│   │   ├── StarBackground.jsx
+│   │   └── ThemeToggle.jsx
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Page components
+│   │   ├── Home.jsx
+│   │   └── NotFound.jsx
+│   ├── App.jsx          # Main app component
+│   ├── index.css        # Global styles & theme
+│   └── main.jsx         # Entry point
+├── Dockerfile           # Docker configuration
+├── nginx.conf           # Nginx config for production
+├── vite.config.js       # Vite configuration
+└── package.json
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview  # Preview production build locally
+```
+
+## 🐳 Docker
+
+### Build and Run with Docker
+
+```bash
+# Build the Docker image
+docker build -t portfolio .
+
+# Run the container
+docker run -d -p 8080:80 portfolio
+```
+
+The app will be available at `http://localhost:8080`
+
+### Docker Compose (optional)
+
+Create a `docker-compose.yml`:
+
+```yaml
+version: '3.8'
+services:
+  portfolio:
+    build: .
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+```
+
+Then run:
+
+```bash
+docker-compose up -d
+```
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with HMR |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## 🎨 Customization
+
+### Theme Colors
+
+Edit the CSS variables in `src/index.css` to customize the color scheme:
+
+```css
+:root {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  /* ... */
+}
+```
+
+### Personal Information
+
+Update your personal details in the following components:
+- `HeroSection.jsx` - Name, title, and introduction
+- `AboutSection.jsx` - Bio and background
+- `SkillsSection.jsx` - Technical skills and proficiency levels
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📬 Contact
+
+- **Location:** Rouen, France
+- **Status:** Seeking internship opportunities
+
+---
+
+Built with ❤️ by Ishak MESSAOUDI
